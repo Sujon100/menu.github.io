@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container{
+    max-width: 1170px;
+    width: 100%;
+}
+
+/* =========================Header Area Design======================== */
+.header_area{
+    background: #9b59b6;
+    /* background: #2C2C32; */
+    padding: 20px 0px;
+     position: relative; 
+}
+
+.nab-bar{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.toggle{
+    display: none;
+}
+
+.nav-menu ul{
+    display: flex;
+    list-style: none;
+    margin: 0px;
+}
+
+.nav-menu ul li a{
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 4px;
+     color: #fff;
+}
+
+.nav-menu ul .active a{
+     background: #2c3e50;
+}
+
+.nav-menu ul li:hover{ 
+    background: #2c3e50;
+    transition: all linear 0.3s;
+}
+.nav-menu ul li i{ 
+   color: #fff;
+}
+
+/* =========================Submenu Design======================== */
+.nav-menu ul li{
+   
+    position: relative;
+}
+.nav-menu ul ul{
+    position: absolute;
+    top: 100%;
+    background: #405c78;
+    width: 200px;
+    flex-direction: column;
+    padding-left: 0px;
+    border-radius: 2px;
+    display: none;
+}
+.nav-menu ul ul ul{
+    left: 100%;
+    top: 0;
+}
+.nav-menu ul ul li{
+    display: block;
+}
+.nav-menu ul ul li a{
+   padding: 5px 20px;
+   
+}
+.nav-menu ul li:hover > ul{
+    display: block;
+}
+
+/* Responsive design For all device*/
+@media all and (max-width:769px){
+/* Responsive menu design*/
+.toggle{
+    display: block;
+}
+.toggle a{
+	color: #fff;
+	font-size: 30px;
+	border: 1px solid #fff;
+	padding: 0px 8px;
+	border-radius: 5px;
+
+}
+
+.nav-menu{
+    width: 100%;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background: #8e44ad;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+    
+}
+.nav-menu ul{
+ flex-direction: column;
+ padding-left: 0px;
+ 
+}
+
+.nav-menu ul li{
+    flex-basis: 100%;
+}
+
+.nav-menu ul li a{
+   
+    padding-left:15px;
+    padding-right: 15px;
+    
+}
+/* Responsive submenu design*/
+.nav-menu ul li:hover > ul{
+    display: none;
+   
+}
+.nav-menu ul li:last-child:hover{
+     border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav-menu ul li i{
+    cursor: pointer;
+    padding: 3px;
+}
+.nav-menu ul ul {
+    position: static;
+    width: 100%;
+}
+.nav-menu ul ul li a{
+    padding-left: 40px;
+    font-size: 16px;
+}
+
+.nav-menu ul ul ul li a{
+    padding-left: 80px;
+    font-size: 16px;
+}
+.nav-menu ul ul ul ul li a{
+    padding-left: 120px;
+    font-size: 16px;
+}
+.nav-menu ul .active{
+     background: #2c3e50;
+}
+
+.nav-menu ul li .fa-angle-up{
+    display: none;
+}
+
+
+
+}
